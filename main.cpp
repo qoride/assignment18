@@ -5,7 +5,13 @@
 using namespace std;
 
 void sort(vector<int> &inputs){
-    
+    for (int x = 0; x < inputs.size()-1; x++){
+        for (int y = 0; y < inputs.size()-x-1; y++){
+            if(inputs.at(y) > inputs.at(y+1)){
+                swap(inputs.at(y),inputs.at(y+1));
+            }
+        }
+    }
 }
 
 int main(){
